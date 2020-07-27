@@ -9,6 +9,8 @@
     <script>
 
         //作业1         求数组[2,6,1,7,4]里面所有元素的和以及平均值；
+
+
        /*  var arr = [2,6,1,7,4];
         var sum = 0;
         for (let i = 0;i<arr.length;i++){
@@ -17,7 +19,10 @@
         var average = sum/arr.length;
         console.log(sum,average); // 想要输出多个变量， 用逗号分隔即可 */
 
+
         //作业2         求数组[2,6,1,77,52,25,7]中的最大值
+
+
         // var arr = [2,6,1,77,52,25,7];
         // var num = 0;
         // for (let i = 0 ; i<=arr.length;i++){
@@ -29,15 +34,28 @@
         //     }
         // };
         // console.log(num);
+
+
         //改进上面的代码部分
-        var arr = [2,6,1,77,52,25,7];
+        /* var arr = [2,6,1,77,52,25,7];
         var max = arr[0];// 可能数组内存放的是负数 如果赋值是0的话  就导致最大值为0 最好的赋值是 数组元素的第一项；
         for (let i = 1 ; i<arr.length;i++){ //因为 i = 0 输出的数组元素是 arr[0] 和max的值是相等的 所以直接从i=1开始比较即可；
             if (arr[i]>max){
                 max = arr [i];
             }
         }
-        console.log(max);
+        console.log(max); */
+
+
+        //作业3 分割字符串   
+        //将数组['red','green','blue','pink']转换为字符串 并且用 | 或者其他符号隔开； 输出：'red|green|blue|pink|'
+        var str = '';
+        var arr =  ['red','green','blue','pink'];
+        for (let i = 0; i < arr.length; i++){
+            str = str + arr[i] + '|';
+        }
+        console.log(str);
+        console.log(typeof str);
     </script>
 </body>
 </html>

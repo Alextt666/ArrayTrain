@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //数组排序 （冒泡排序）
+        //冒泡排序： 是一种算法 把一系列的数据按照一定的顺序进行排列显示（从小到大 或者 从大到小）。
+        //外层for循环 是 总共的趟数
+        //里层的for循环 是 交换的次数 
+
+        var arr = [4,1,2,3,5];
+        for (let i = 0;i<arr.length-1; i++){
+            for (let j = 0;j<arr.length-i-1;j++){
+                if(arr[j]>arr[j+1]){
+                    let temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        console.log(arr);
+
+
+        //按照实际数目移动的数目 可以修改 外层 和里层的执行次数  但是 执行次数增加 并不影响结果 所以最好就统一为 arr.length-1；
+       /*  var arr = [4,1,2,3,5];
+        for (let i = 0;i<2;i++){
+            for (let j = 0;j<4;j++){
+                if (arr[j]>arr[j+1]){
+                    let temp = arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
+                }
+            }
+        };
+        console.log(arr); */
+
+
+        // 总结  
+        // 冒泡排序三大步骤   
+
+        // 1.一共需要的趟数 是外层for循环 （以其中一个数字移动为准） 如 54321 => 45321 => 43521 =>43251 =>43215 一直移动 数字5 直到 43215 5到达目标位置算作一趟。 
+
+        // 2.每一趟需要交换的次数 是里层for循环  如上面 总共有 四个 => ； 代表一趟交换了 四次 ；
+
+        // 3.里层循环的内部 进行 比较 和交换
+
+
+    </script>
+</body>
+</html>

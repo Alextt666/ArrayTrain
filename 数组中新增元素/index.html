@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.如果只是想要将数组扩容 可以使用修改length长度 来实现  length属性是可读写的 
+        /* 
+                var arr = ['red','greed','blue'];
+                console.log(arr.length); 
+                arr.length = 5; //通过修改arr.length的长度将数组扩容
+                console.log(arr);
+                console.log(arr[3]);//新增的数组元素为undifined；
+         */
+
+        //2.通过修改数组索引的方法新增数组元素   
+        //追加 数组元素
+
+        /*  var arr1 = ['red','greed','blue'];
+         arr1[3] = 'pink';
+         console.log(arr1);
+         arr1[5] = '111';    //若修改的值不连续 如 此时少了索引4  则会自动添加一个空元素 
+         console.log(arr1); //已经修改为6个数组元素
+ 
+         console.log(arr1[4]); // 返回 undifined
+ 
+         arr1[0] = 'yellow';
+         console.log(arr1); // 如果追加的元素索引 已经被占用 则替换为新添加的值 如此处的 yellow 将替换red； 
+ 
+         arr1 = 'HI';
+         console.log(arr1); // 不要对数组名直接赋值  否则里面的数组元素就没有了； */
+
+
+        //作业1 新建一个数组，并往里面存放 整数 1-10；
+
+
+        /* var arr = [];
+        for (let i = 0; i<10 ; i++){
+            arr[i]=i+1;
+        }
+        console.log(arr);
+        console.log(arr[4]); */
+
+
+        //作业2  将数组[2,0,6,1,77,0,52,0,25,7]中大于等于10的元素选出来 ，放入新的数组；
+
+        /*  var arr = [2,0,6,1,77,0,52,0,25,7];
+         var arr1 = [];
+         var j = 0;
+         for (let i = 0;i<arr.length;i++){
+             if (arr[i]>=10){
+                 arr1[j] = arr[i];
+                 j++;
+             }
+         }
+         console.log(arr1); */
+
+        //方法2 
+        /* var arr = [2,0,6,1,77,0,52,0,25,7];
+        var arr1 = [];
+        for (let i = 0;i<arr.length;i++){
+            if (arr[i]>=10){
+                arr1[arr1.length] = arr[i]; //arr1.length的长度是动态变化的 所以刚开始是0 当存入元素的时候就开始累加 1 
+            }
+        }
+        console.log(arr1); */
+
+
+        //作业3 将数组[2,0,6,1,77,0,52,0,25,7]中的0 去掉后，形成一个不包含 0 的新数组；
+
+       /*  var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var arr1 = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                arr1[arr1.length] = arr[i];
+            }
+        }
+        console.log(arr1); */
+
+        //作业4 将数组翻转 
+        //['red','green','blue','pink','purple']; 翻转为['purple','pink',...,'red'];
+        //思路是 旧数组将43210 赋给新数组的 01234  
+        //01234就是新数组的 .length 方法  旧数组则是从 长度-1 开始 一直到0 每次递减1；
+        var arr = ['red','green','blue','pink','purple'];
+        var reverse = [];
+        for( i = arr.length-1;i >= 0; i--){
+            reverse[reverse.length] = arr[i];
+        }
+        console.log(reverse);
+    </script>
+</body>
+
+</html>
